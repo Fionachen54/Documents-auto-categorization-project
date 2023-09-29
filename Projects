@@ -1,0 +1,24 @@
+import os
+downloadPath = "/Users/Zixuan Chen's iCloud Drive/Desktop/other copy"
+allItems = os.listdir(downloadPath)
+for items in allItems:
+    extension = os.path.splitext(items)
+    targetPath = ""
+    if extension in ['.jpg', 'jpeg', 'gif', 'png', 'bmp']:
+        targetPath = os.path.join(downloadPath, 'Image Document')
+    elif extension in ['.avi', '.mp4', 'wmv', 'mov', 'flv']:
+        targetPath = os.path.join(downloadPath, 'Video Document')
+    elif extension in ['.wav', '.mp3', 'mid', '.ape', '.flac']:
+        targetPath = os.path.join(downloadPath, 'Audio document')
+    elif extension in ['.pdf']:
+        targetPath = os.path.join(downloadPath, 'PDF document')
+    elif extension in ['.docx', 'doc']:
+        targetPath = os.path.join(downloadPath, 'WORD document')
+    elif extension in ['.xlsx', 'xls']:
+        targetPath = os.path.join(downloadPath, 'EXCEL document')
+    elif extension in ['.pptx', '.ppt']:
+        targetPath = os.path.join(downloadPath, 'PPT document')
+    else:
+        targetPath = os.path.join(downloadPath, 'Other document')
+        if not os.path.exists(targetPath):
+            print(targetPath)
