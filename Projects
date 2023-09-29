@@ -1,5 +1,5 @@
 import os
-downloadPath = "/Users/Zixuan Chen's iCloud Drive/Desktop/other copy"
+downloadPath = "/Users/Fiona Chen's iCloud Drive/Desktop/other copy"
 allItems = os.listdir(downloadPath)
 for items in allItems:
     extension = os.path.splitext(items)
